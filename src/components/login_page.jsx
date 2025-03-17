@@ -11,8 +11,10 @@ const LoginPage = () => {
   }
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100 p-4">
-      <form className="bg-white p-6 rounded shadow-md w-full max-w-sm">
+    <div className="flex items-center justify-center min-h-screen bg-gray-100">
+      <form className="w-full max-w-sm bg-white p-6 rounded-lg shadow-md">
+        <h2 className="text-2xl font-semibold mb-6 text-center">Login</h2>
+
         <div className="mb-4">
           <label
             htmlFor="exampleInputEmail1"
@@ -23,11 +25,9 @@ const LoginPage = () => {
           <input
             className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-600"
             value={email}
-            onChange={(e) => {
-              console.log(e.target.value);
-              setEmail(e.target.value);
-            }}
+            onChange={(e) => setEmail(e.target.value)}
             type="email"
+            required
           />
         </div>
 
@@ -41,24 +41,22 @@ const LoginPage = () => {
           <input
             className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-600"
             value={password}
-            onChange={(e) => {
-              console.log(e.target.value);
-              setPassword(e.target.value);
-            }}
+            onChange={(e) => setPassword(e.target.value)}
             type="password"
+            required
           />
         </div>
 
-        <div className="text-center">
+        <div className="flex items-center justify-center">
           <button
-            className="bg-red-700 text-white rounded-2xl px-4 py-2 hover:bg-red-800 transition"
+            className="bg-red-700 text-white px-6 py-2 rounded-xl hover:bg-red-800 transition-colors"
             onClick={(e) => {
               e.preventDefault();
               setSubmitting((prev) => !prev);
               handleSubmit();
             }}
           >
-            {submitting ? "Submited" : "Click Me"}
+            {submitting ? "Submitted" : "Click Me"}
           </button>
         </div>
       </form>
