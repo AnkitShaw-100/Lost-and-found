@@ -14,7 +14,6 @@ const LoginPage = () => {
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100">
       <form className="w-full max-w-sm bg-white p-6 rounded-lg shadow-md text-center">
-        {/* Replacing Bootstrap icon with logo */}
         <img src={Logo} alt="Logo" className="w-20 h-20 mx-auto mb-3" />
 
         <h2 className="text-2xl font-semibold mb-6">Please sign in</h2>

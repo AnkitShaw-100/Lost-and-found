@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import Logo from "../assets/logo.png"
+import Logo from "../assets/logo.png";
+import Banner from "../assets/banner.webp";
 
 const HomePage = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -105,7 +106,12 @@ const HomePage = () => {
                 </div>
             </nav>
             {/* Spacer for fixed navbar */}
-            <div className="h-16"></div>
+            {/* <div className="h-16"></div> */}
+            {/* <div className="w-full h-[50vh] overflow-hidden">
+                    <img src={Banner} alt="banner_image" className="w-full h-full object-cover" />
+                
+                </div> */}
+
         </div>
     );
 };

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import Logo from "../assets/logo.png"; // Ensure the correct path
-
+import Logo from "../assets/logo.png"; 
 const ProfilePage = () => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
