@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom"; 
 import Logo from "../assets/logo.png";
 import Banner from "../assets/banner.webp";
 
@@ -12,7 +13,7 @@ const HomePage = () => {
                     <div className="flex items-center justify-between h-16">
                         {/* Logo and Brand */}
                         <div className="flex items-center">
-                            <a className="flex items-center space-x-3" href="#">
+                            <Link to="/" className="flex items-center space-x-3">
                                 <div className="w-12 h-12 flex items-center justify-center">
                                     <img
                                         src={Logo}
@@ -21,23 +22,24 @@ const HomePage = () => {
                                     />
                                 </div>
                                 <span className="font-bold text-xl text-gray-800">FoundIt</span>
-                            </a>
+                            </Link>
                         </div>
 
                         {/* Navigation Links */}
                         <div className="hidden md:flex items-center space-x-8">
-                            <a href="#" className="text-gray-700 hover:text-gray-900 font-medium px-3 py-2">
+                            <Link to="/" className="text-gray-700 hover:text-gray-900 font-medium px-3 py-2">
                                 Home
-                            </a>
-                            <a href="#" className="text-gray-700 hover:text-gray-900 font-medium px-3 py-2">
+                            </Link>
+                            <Link to="/report" className="text-gray-700 hover:text-gray-900 font-medium px-3 py-2">
                                 Report
-                            </a>
-                            <a href="#" className="text-gray-700 hover:text-gray-900 font-medium px-3 py-2">
-                                About us
-                            </a>
-                            <a href="#" className="text-gray-700 hover:text-gray-900 font-medium px-3 py-2">
+                            </Link>
+                            <Link to="/aboutUs" className="text-gray-700 hover:text-gray-900 font-medium px-3 py-2">
+                                About Us
+                            </Link>
+                            {/* Updated Profile Link */}
+                            <Link to="/profile" className="text-gray-700 hover:text-gray-900 font-medium px-3 py-2">
                                 Profile
-                            </a>
+                            </Link>
                         </div>
 
                         {/* Search Bar */}
@@ -85,9 +87,9 @@ const HomePage = () => {
                             <a href="#" className="text-gray-700 hover:text-gray-900 font-medium px-3 py-2">
                                 About us
                             </a>
-                            <a href="#" className="text-gray-700 hover:text-gray-900 font-medium px-3 py-2">
+                            <Link to="/profile" className="text-gray-700 hover:text-gray-900 font-medium px-3 py-2">
                                 Profile
-                            </a>
+                            </Link>
                             {/* Mobile Search */}
                             <form className="flex px-3">
                                 <input
@@ -105,13 +107,6 @@ const HomePage = () => {
                     </div>
                 </div>
             </nav>
-            {/* Spacer for fixed navbar */}
-            {/* <div className="h-16"></div> */}
-            {/* <div className="w-full h-[50vh] overflow-hidden">
-                    <img src={Banner} alt="banner_image" className="w-full h-full object-cover" />
-                
-                </div> */}
-
         </div>
     );
 };

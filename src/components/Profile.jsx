@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import Logo from "../assets/logo.png"; 
+import Logo from "../assets/logo.png";
+import { getDatabase, ref, set } from "../../firebase.js";
 const ProfilePage = () => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -17,6 +18,16 @@ const ProfilePage = () => {
       hostel,
       department,
     });
+
+    const database = getDatabase()
+    console.log(database)
+
+    set(ref(database, "users"), {
+      firstName, lastName, enrollmentNumber, hostel, department
+    })
+
+
+
   };
 
   return (
